@@ -28,7 +28,7 @@ twitter_username:
 github_username: vl3
 
 # Build settings
-theme: minima
+theme: jekyll-theme-so-simple
 
 plugins:
   - jekyll-feed
@@ -52,3 +52,9 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+google_fonts:
+  - name: "Raleway"
+    weights: "400,300,600"
+  - name: "Lora"
+    weights: "400,400i,700,700i"
