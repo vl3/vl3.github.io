@@ -11,10 +11,14 @@
 <body>
 	<header class="black">
     <div class="container">
-      <h1><a href="{{ site.baseurl }}/">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</a></h1>
+      <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
       <h2>Developer. Engineer.</h2>
-      <ul class="social">        
-        <a href="{{ site.baseurl }}/about/"><li>About me</li></a>
+      <ul class="social">
+        <li>
+          <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#f58080" style="width: 40px; height: 40px;">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 7.19l6.64 6.64h.72L15 7.19v-.72l-3.32-3.32-.36-.15H4.68l-.36.15L1 6.47v.72zm7 5.56L2.08 6.83 4.89 4h6.22l2.81 2.83L8 12.75zm0-7.73h2.69l1.81 1.81-4.5 4.4V5.02z"></path></g>
+          </svg>
+        </li>
       </ul>
     </div>
   </header>
@@ -22,9 +26,5 @@
   <main>
     {{ content }}
   </main>
-
-  <footer style="margin-top: 3rem; border-top: 1px solid #eee; padding-top: 1rem;">
-      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
-  </footer>
 </body>
 </html>

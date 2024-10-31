@@ -21,7 +21,7 @@
 title: Valentin Sanjuan
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Programming & Computers
+  Developer. Engineer.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "vl3.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 logo: # path of site logo, e.g. "/images/logo.png"

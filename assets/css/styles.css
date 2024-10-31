@@ -202,7 +202,8 @@ main {
 
 .highlight {
   background-color: #fdf6e3;
-  color: #586e75
+  color: #586e75;
+  padding: 10px;
 }
 
 .highlight .c {
@@ -596,10 +597,18 @@ figcaption {
   margin-top: -1em
 }
 
-header {
-  padding: 120px 0;
+.post-header {
+  padding: 80px 0;
   color: #fff;
-  overflow: hidden
+  overflow: hidden;
+  text-align: left;
+}
+
+header {
+  padding: 80px 0;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
 }
 
 header h2 {
@@ -620,7 +629,7 @@ header .social {
 
 header .social li {
   color: #fff;
-  float: left
+  text-align: center;
 }
 
 header .social li i {
@@ -654,7 +663,6 @@ header .social li i:hover {
 
 .container {
   margin: 0 150px;
-  max-width: 720px
 }
 
 .container div.highlighter-rouge {
@@ -851,8 +859,9 @@ header .social li i:hover {
 }
 
 .black {
-  background-image: url("/assets/images/pattern.jpg")
-}
+  /*! background-image: url("/assets/images/pattern.jpg") */
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23271543' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");}
 
 .black h2 {
   color: #999
