@@ -1,17 +1,24 @@
 ---
-layout: page
+layout: default
 ---
 
-{{ content }}
-
-<div class="entries-{{ page.entries_layout | default: 'list' }}">
-  {%- if site.plugins contains 'jekyll-paginate' and page.paginate or site.gems contains 'jekyll-paginate' and page.paginate -%}
-    {%- comment -%}
-      Add paginator.posts loop if jekyll-paginate plugin is enabled
-      and page.paginate == true
-    {%- endcomment -%}
-    {% include posts-paginated.html %}
-  {%- else -%}
-    {% include posts-limit.html %}
-  {%- endif -%}
-</div>
+  <div class="container">
+    {%- if site.posts.size > 0 -%}
+    <ul class="posts">
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <div class="post-meta">
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            <h2 class="post-title">{{ post.title | escape }}</h2>
+          </a>
+          <div class="post-date"><i class="icon-calendar"></i>{{ post.date | date: date_format }}</div>
+        </div>
+        <div class="post">
+          {{ post.excerpt }}
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+    {%- endif -%}
+  </div>

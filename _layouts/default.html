@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<!--
-    So Simple Jekyll Theme 3.2.0
-    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
-    Free for personal and commercial use under the MIT license
-    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
--->
-<html lang="{{ page.lang | default: site.lang | default: 'en-US' }}" class="no-js">
-  {% include head.html %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    {% feed_meta %}
+    {% seo %}
+</head>
+<body>
+	<header class="black">
+    <div class="container">
+      <h1><a href="{{ site.baseurl }}/">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</a></h1>
+      <h2>Developer. Engineer.</h2>
+      <ul class="social">        
+        <a href="{{ site.baseurl }}/about/"><li>About me</li></a>
+      </ul>
+    </div>
+  </header>
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} {% if page.entries_layout == 'grid' %}page--wide{% endif %} {{ page.title | slugify }}">
-    {% include skip-links.html %}
-    {% include navigation.html %}
-    {% include masthead.html %}
-
+  <main>
     {{ content }}
+  </main>
 
-    {% include footer.html %}
-    {% include scripts.html %}
-  </body>
-
+  <footer style="margin-top: 3rem; border-top: 1px solid #eee; padding-top: 1rem;">
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+  </footer>
+</body>
 </html>
