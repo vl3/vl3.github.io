@@ -630,6 +630,7 @@ header .social {
 header .social li {
   color: #fff;
   text-align: center;
+  display: inline-block;
 }
 
 header .social li i {
